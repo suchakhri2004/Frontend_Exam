@@ -1,0 +1,28 @@
+$light-bg: #f7f7f9;
+$light-text: #0e1116;
+$light-card: #ffffff;
+$light-border: #e5e7eb;
+
+$dark-bg: #0b0f14;
+$dark-text: #f5f7fb;
+$dark-card: #121823;
+$dark-border: #1f2937;
+
+:root {
+  --bg: #{$light-bg};
+  --text: #{$light-text};
+  --card: #{$light-card};
+  --border: #{$light-border};
+  --accent: #6366f1;
+  --accent-contrast: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --bg: #{$dark-bg};
+  --text: #{$dark-text};
+  --card: #{$dark-card};
+  --border: #{$dark-border};
+  --accent: #22d3ee;
+  --accent-contrast: #0b0f14;
+}
+
