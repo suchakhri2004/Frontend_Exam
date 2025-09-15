@@ -1,0 +1,71 @@
+@use "../_mixins" as *;
+
+.shell {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.navItem:hover {
+  background: color-mix(in oklab, var(--card) 85%, var(--accent) 15%);
+  border-color: color-mix(in oklab, var(--border) 70%, var(--accent) 30%);
+}
+
+.navLink {
+  @extend .navItem;
+  text-decoration: none;
+}
+
+.main {
+  padding: 16px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  font-size: 12px;
+  color: #7c8592;
+}
+
+.themeToggle { @extend .navItem; }
